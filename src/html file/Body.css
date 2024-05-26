@@ -1,0 +1,221 @@
+*{
+    padding: 0;
+    margin: 0px;
+   box-sizing: border-box;  
+   font-family: Verdana, Geneva, Tahoma, sans-serif;  
+
+}
+body{
+    /* background-color: #2b1d0f; */
+    background-color: #000;
+    color: #fff;
+}
+body::-webkit-scrollbar{
+    width: 16px;
+}
+body::-webkit-scrollbar-thumb{
+   background-color: #a1a1a1;
+}
+body::-webkit-scrollbar-track{
+    background-color: #ebebeb;
+}
+header nav{
+    background: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+header h1{
+    font-size: 26px;
+    font-weight: 700px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+header nav form{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    width: 30%;
+
+}
+form input[type="text"]{
+    flex-grow: 1;
+    margin-left: 20px;
+    width: 90%;
+}
+form input[type="text"] button[type="submit"]{
+   border: none;
+   font-size: 18px;
+   padding: 10px;
+   border-radius: 4px;
+}
+button[type="submit"]{
+background-color: #f44336;
+color: #fff;
+cursor: pointer;
+transition: background-color 0.2s ease-in-out ;
+width: 25%;
+}
+button:hover{
+    background-color:  #ff5c5c;
+}
+
+@media screen and (max-width:600px){
+    header nav{flex-direction: column;}
+   header nav form{
+    width: 80%;
+   }  
+}
+
+.recipe-container{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    place-items: center;
+    
+}
+.recipe{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    
+    color: #000;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(78,73,0.1),-5px -5px 10px rgba(34,34,34,0.5);
+    cursor: pointer;
+    max-width: 350px;
+    transition: transform 0.3s ease-in-out ;
+}
+.recipe:hover{
+    transform: scale(1.02);
+}
+.recipe img{
+              height: 300px;
+
+}
+.recipe h3{
+    font-size: 24px;
+    margin-block: 5px;
+
+}
+.recipe p{
+    font-size: 20px;
+    color: #4a4a4a;
+    margin: 5px 0;
+}
+.recipe span{
+    font-weight: 600;
+}
+.recipe button{
+    font-size: 20px;
+    font-weight: 600px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color:#f44336;
+    margin: 18px auto;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+.block-on{
+    display: none;
+}
+.recipe button :hover{
+    background-color: #ff5c5c;
+}
+.recipe-details{
+    width: 50%;
+    height: 64%;
+    position: fixed;
+    top: 24%;
+    left: 30%;
+    background-color: #694c2f;
+    font-size: 20px;
+    border-radius: 12px;
+    transform: translate(-50% -50%);
+    -webkit-transform: translate(-50% -50%);
+    display: none;
+    transition: all 0.5s ease-in-out;
+    overflow-y: scroll;
+}
+.recipe-details::-webkit-scrollbar{
+    width: 10px;
+}
+.recipe-details::-webkit-scrollbar-thumb{
+    background-color: #b5b5ba;
+    border-radius: 16px;
+    --webkit-border-radius:16px;
+}
+
+
+
+.recipe-details-btn{
+    font-size: 20px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 29px;
+    top: 25px;
+    border-radius: 2px;
+}
+.recipe-details-con{
+    padding: 30px;
+}
+
+.recipeName{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+}
+.IngredientsList li {
+    margin-bottom: 10px;
+    margin-left: -20px;
+    list-style: none;
+    line-height: 30px;
+
+
+}
+.Intruction p{
+line-height: 30px;
+white-space: pre-line;
+}
+.recipe-details-btn{
+    background-color: #f44336;
+color: #fff;
+cursor: pointer;
+transition: background-color 0.2s ease-in-out ;
+width: 35px;
+padding: 10px;
+
+}
+.recipeName,.IngredientsList,.Intruction{
+    margin-bottom: 20px;
+}
+
+.img1{
+    padding: 0;
+    margin-right: 0;
+    /* background-image: url(traditional-indian-soup-lentils-indian-dhal-spicy-curry-bowl-spices-herbs-rustic-black-wooden-table.jpg); */
+
+    
+    background-image: url("c:\Users\dell\jspider\1.myProject\html css javaScript\fetch Api\Food recipe\top-view-food-frame-with-copy-space.jpg");
+    background-image: url("https://st3.depositphotos.com/4590583/37701/i/450/depositphotos_377012624-stock-photo-baked-squid-rice-vegetables-black.jpg");
+    background-image: url("https://img.freepik.com/premium-photo/elegant-expensive-dish-plate-dark-black-gourmet-dinner-chef_76964-24763.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+
+    
+
+}
+
